@@ -1,0 +1,58 @@
+using System.Collections;
+using System.Collections.Generic;
+using Unity.VisualScripting;
+using UnityEngine;
+
+[RequireComponent(typeof (Animator))]
+public class BallMovement : MonoBehaviour
+{
+    [Header("Fall")]
+    [SerializeField] private float fallHeight;
+    [SerializeField] private float fallSpeedDefault;
+    [SerializeField] private float fallMaxSpeed;
+    [SerializeField] private float fallSpeedAxeleration;
+
+    private Animator animator;
+
+    private float floorY;
+    private float fallSpeed;
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+        enabled = false;
+    }
+
+    private void Update()
+    {
+        if(transform.position.y > floorY)
+        {
+            transform.Translate(0, -fallSpeed * Time.deltaTime, 0);
+            if(fallSpeed < fallMaxSpeed)
+            {
+                fallSpeed += fallSpeedAxeleration * Time.deltaTime;
+            }
+        }
+        else
+        {
+            transform.position = new Vector3(transform.position.x, floorY, transform.position.z);
+            enabled = false;
+        }
+    }
+    public void Jump()
+    {
+        animator.speed = 1;
+        fallSpeed = fallSpeedDefault;
+    }
+    public void Fall(float startFloorY)
+    {
+        animator.speed = 0;
+        enabled = true;
+        floorY = startFloorY - fallHeight;
+
+
+    }
+    public void Stop()
+    {
+        animator.speed = 0;
+    }
+}
