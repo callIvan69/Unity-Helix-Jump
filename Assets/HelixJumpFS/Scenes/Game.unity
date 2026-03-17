@@ -305,13 +305,24 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!20 &732014732 stripped
 Camera:
   m_CorrespondingSourceObject: {fileID: 3497830064674924689, guid: 9da0957bc53078e41b2a7a16716354e7, type: 3}
   m_PrefabInstance: {fileID: 3497830064794912226}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1051897645 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3253701014522774508, guid: bd02027bc5f76984f87d956aa02c142d, type: 3}
+  m_PrefabInstance: {fileID: 166374762390730226}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1074759066 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 141263442, guid: 9da0957bc53078e41b2a7a16716354e7, type: 3}
@@ -401,6 +412,7 @@ MonoBehaviour:
   ballController: {fileID: 1074759066}
   levelProgress: {fileID: 1784308504}
   score: 0
+  hightScoreText: {fileID: 1051897645}
 --- !u!114 &1784308508
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -422,6 +434,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 166374762390730232, guid: bd02027bc5f76984f87d956aa02c142d, type: 3}
+      propertyPath: ballController
+      value: 
+      objectReference: {fileID: 1074759066}
+    - target: {fileID: 166374762390730232, guid: bd02027bc5f76984f87d956aa02c142d, type: 3}
+      propertyPath: scoreCollector
+      value: 
+      objectReference: {fileID: 1784308507}
+    - target: {fileID: 166374762520984489, guid: bd02027bc5f76984f87d956aa02c142d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 166374762653114784, guid: bd02027bc5f76984f87d956aa02c142d, type: 3}
       propertyPath: ballController
       value: 
@@ -436,7 +460,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 166374762653114787, guid: bd02027bc5f76984f87d956aa02c142d, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 166374762653114787, guid: bd02027bc5f76984f87d956aa02c142d, type: 3}
       propertyPath: m_AnchorMax.x
@@ -522,6 +546,10 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: LoadLevel
       objectReference: {fileID: 0}
+    - target: {fileID: 166374763354609294, guid: bd02027bc5f76984f87d956aa02c142d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 166374763987140306, guid: bd02027bc5f76984f87d956aa02c142d, type: 3}
       propertyPath: levelProgress
       value: 
@@ -534,6 +562,10 @@ PrefabInstance:
       propertyPath: levelGenerator
       value: 
       objectReference: {fileID: 513548939}
+    - target: {fileID: 166374763987140332, guid: bd02027bc5f76984f87d956aa02c142d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 166374764095071900, guid: bd02027bc5f76984f87d956aa02c142d, type: 3}
       propertyPath: ballController
       value: 
@@ -581,7 +613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1289526353686386829, guid: 39910ac54844fbc44951aa2bb3075194, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1289526353686386829, guid: 39910ac54844fbc44951aa2bb3075194, type: 3}
       propertyPath: m_AnchorMax.x
@@ -682,7 +714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3497830063972076774, guid: 9da0957bc53078e41b2a7a16716354e7, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 3497830063972076774, guid: 9da0957bc53078e41b2a7a16716354e7, type: 3}
       propertyPath: m_LocalPosition.x
